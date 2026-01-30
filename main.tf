@@ -1,13 +1,13 @@
 provider "google" {
-  project = var.project
-  region  = var.region
-  zone    = var.zone
+  project = "upheld-beach-485606-d1"
+  region  = us-central1
+  zone    = us-central1-a
 }
 
 # Low-cost instance
 resource "google_compute_instance" "low_cost_vm" {
   name         = "low-cost-vm"
-  machine_type = var.machine_type
+  machine_type = "e2-micro"
 
   boot_disk {
     initialize_params {
