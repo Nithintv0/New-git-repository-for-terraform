@@ -1,8 +1,8 @@
 provider "google" {
   credentials = file("GOOGLE_CREDENTIALS.json")
   project = "upheld-beach-485606-d1"
-  region  = "us-central1 (Iowa)"
-  zone    = "us-central1-a"
+  region  = "Europe-west4"
+  zone    = "Europe-west4-a"
 }
 
 # Low-cost instance
