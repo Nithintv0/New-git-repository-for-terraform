@@ -1,5 +1,5 @@
 provider "google" {
-  credentials = file("upheld-beach-485606-d1-dc54a1de2f1e.json")
+  credentials = file("GOOGLE_CREDENTIALS.json")
   project = "upheld-beach-485606-d1"
   region  = us-central1 (Iowa)
   zone    = us-central1-a
