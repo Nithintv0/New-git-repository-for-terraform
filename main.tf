@@ -8,7 +8,7 @@ provider "google" {
 resource "google_compute_instance" "low_cost_vm1" {
   name         = "low-cost-vm3"
   machine_type = var.machine_type
-}
+
   boot_disk {
     initialize_params {
       image = "debian-cloud/debian-12" # small, common Linux image
@@ -28,6 +28,7 @@ resource "google_compute_instance" "low_cost_vm2" {
       type  = "pd-standard"
     }
   }
+}
   network_interface {
     network = "default"
     # Omit access_config {} to avoid assigning an external IP (reduces exposure
