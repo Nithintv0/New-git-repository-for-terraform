@@ -5,8 +5,8 @@ provider "google" {
 }
 
 # Low-cost instance
-resource "google_compute_instance" "low_cost_vm" {
-  name         = "low-cost-vm2"
+resource "google_compute_instance" "low_cost_vm1" {
+  name         = "low-cost-vm1"
   machine_type = var.machine_type
 
   boot_disk {
