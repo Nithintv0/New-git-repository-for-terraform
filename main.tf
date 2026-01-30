@@ -16,6 +16,13 @@ resource "google_compute_instance" "low_cost_vm1" {
       type  = "pd-standard"
     }
   }
+  network_interface {
+    network = "default"
+    # Omit access_config {} to avoid assigning an external IP (reduces exposure
+    # and some possible charges). If you need external access, uncomment the
+    # line below:
+    # access_config {}
+  }
 }
 
 # Low-cost instance
@@ -29,6 +36,13 @@ resource "google_compute_instance" "low_cost_vm2" {
       size  = 10                       # GB (keep small to reduce cost)
       type  = "pd-standard"
     }
+  }
+  network_interface {
+    network = "default"
+    # Omit access_config {} to avoid assigning an external IP (reduces exposure
+    # and some possible charges). If you need external access, uncomment the
+    # line below:
+    # access_config {}
   }
 }
 
