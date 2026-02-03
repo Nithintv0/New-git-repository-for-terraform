@@ -1,6 +1,6 @@
 # 1. Define the Google Cloud Provider
 provider "google" {
-  project = "your-project-id"
+  project = "upheld-beach-485606-d1"
   region  = "us-central1"
 }
 
